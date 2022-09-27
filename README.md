@@ -1,0 +1,2 @@
+# SupermarketSidekick
+Senior Design Project
