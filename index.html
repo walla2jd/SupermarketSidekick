@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="index.css">
+        <title>Supermarket Sidekick</title>
+        <script defer src="src/index.js" charset="utf-8"></script>
+        <script>
+            function getLocation() {
+                var x = document.getElementById("demo")
+                if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(showPosition);
+                } else {
+                x.innerHTML = "Geolocation is not supported by this browser.";
+                }
+            }
+            function showPosition(position) {
+                x.innerHTML = "Latitude: " + position.coords.latitude +
+                "<br>Longitude: " + position.coords.longitude;
+            }
+        </script>
+    
+        <div class="topnav">
+            <h1>Supermarket Sidekick</h1>
+            <a href="#page1">Page 1</a>
+            <a href="#page2">Page 2</a>
+            <input id="search" type="text" placeholder="Search for item">
+            <button onclick="getLocation()">Test Location</button>
+        </div>
+    </head>
+</html>

@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Trirong:ital,wght@1,300&display=swap');
+body{
+    background-color: #F7F5FB;
+}
+h1{
+    font-family: 'Trirong', serif;
+    text-align: center;
+
+}
+.topnav{
+    text-align: center;
+    background-color: #FF0022;
+    overflow: hidden;
+    color: white;
+}
