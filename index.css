@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Trirong:ital,wght@1,300&display=swap');
 body{
-    background-color: #F7F5FB;
+    background-color: #FAF6F6;
 }
 h1{
     font-family: 'Trirong', serif;
@@ -9,7 +9,7 @@ h1{
 }
 .topnav{
     text-align: center;
-    background-color: #FF0022;
+    background-color: #75B09c;
     overflow: hidden;
     color: white;
 }
