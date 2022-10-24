@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="index.css">
+        <title>Supermarket Sidekick</title>
+        <script defer src="src/index.js" charset="utf-8"></script>
+        <script>
+            function getLocation() {
+                var x = document.getElementById("demo")
+                if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(showPosition);
+                } else {
+                x.innerHTML = "Geolocation is not supported by this browser.";
+                }
+            }
+            function showPosition(position) {
+                x.innerHTML = "Latitude: " + position.coords.latitude +
+                "<br>Longitude: " + position.coords.longitude;
+            }
+        </script>
+    
+        <div class="topnav">
+            <h1><img src="/images/supermarket_logo.png" alt="logo" width="100" height="100">Supermarket Sidekick</h1>
+            <a href="index.html">Home</a>
+            <a href="about.html">About the Creators</a>
+            <a href="data.html">Data</a>
+            <div>
+              <form id="form"> 
+                <input type="search" id="query" name="s" placeholder="Search..." aria-label="Search for an item on the site">
+                <button>Search</button>
+              </form>
+            </div>
+        </div>
+
+        <div class="about-section">
+            <h1>About The Creators</h1>
+            <p>We are the creators of Supermarket Sidekick.</p>
+            <p>Resize the browser window to see that this page is responsive by the way.</p>
+          </div>
+          
+          <h2 style="text-align:center">Our Team</h2>
+          <div class="row">
+            <div class="column">
+              <div class="card">
+                <img src="/images/stockavatar.jpeg" alt="Haseeb" style="width:100%">
+                <div class="container">
+                  <h2>Haseeb Ikram</h2>
+                  <p class="title">Software Developer, UI/UX Designer</p>
+                  <p>Info about Haseeb.</p>
+                  <p>ikramhu@mail.uc.edu</p>
+                  <p><button class="button">Contact</button></p>
+                </div>
+              </div>
+            </div>
+          
+            <div class="column">
+              <div class="card">
+                <img src="/images/stockavatar.jpeg" alt="Jeffrey" style="width:100%">
+                <div class="container">
+                  <h2>Jeffrey Wallace</h2>
+                  <p class="title">Software Developer, UI/UX Designer</p>
+                  <p>Info about Jeffrey.</p>
+                  <p>walla2jd@mail.uc.edu</p>
+                  <p><button class="button">Contact</button></p>
+                </div>
+              </div>
+            </div>
+          
+            <div class="column">
+              <div class="card">
+                <img src="/images/stockavatar.jpeg" alt="Ginnae" style="width:100%">
+                <div class="container">
+                  <h2>Ginnae Ayenew</h2>
+                  <p class="title">Database Manager, Security Analyst</p>
+                  <p>Info about Ginnae.</p>
+                  <p>mcintoge@mail.uc.edu</p>
+                  <p><button class="button">Contact</button></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="column">
+            <div class="card">
+              <img src="/images/stockavatar.jpeg" alt="Riley" style="width:100%">
+              <div class="container">
+                <h2>Riley Meyer</h2>
+                <p class="title">Database Manager, Security Analyst</p>
+                <p>Info about Riley.</p>
+                <p>meyer2rn@mail.uc.edu</p>
+                <p><button class="button">Contact</button></p>
+              </div>
+            </div>
+          </div>
+
+    </head>
+</html>

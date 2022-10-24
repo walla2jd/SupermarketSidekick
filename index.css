@@ -1,9 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Trirong:ital,wght@1,300&display=swap');
+@font-face {
+  font-family: MilkyHoney;
+  src: url(/assets/milky_honey.ttf);
+}
 body{
     background-color: #FAF6F6;
 }
 h1{
-    font-family: 'Trirong', serif;
+    font-family: 'MilkyHoney', serif;
     text-align: center;
 
 }
