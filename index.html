@@ -1,36 +1,87 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-    <head>
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="index.css">
-        <title>Supermarket Sidekick</title>
-        <script defer src="src/index.js" charset="utf-8"></script>
-        <script>
-            function getLocation() {
-                var x = document.getElementById("demo")
-                if (navigator.geolocation) {
-                    navigator.geolocation.getCurrentPosition(showPosition);
-                } else {
-                x.innerHTML = "Geolocation is not supported by this browser.";
-                }
-            }
-            function showPosition(position) {
-                x.innerHTML = "Latitude: " + position.coords.latitude +
-                "<br>Longitude: " + position.coords.longitude;
-            }
-        </script>
 
-          <div class="topnav">
-            <h1><img src="/images/supermarket_logo.png" alt="logo" width="100" height="100">Supermarket Sidekick</h1>
-            <a href="index.html">Home</a>
-            <a href="about.html">About the Creators</a>
-            <a href="data.html">Data</a>
-            <div>
-              <form id="form"> 
-                <input type="search" id="query" name="s" placeholder="Search..." aria-label="Search for an item on the site">
-                <button>Search</button>
-              </form>
-            </div>
-          </div>
-    </head>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="index.css">
+  <title>Supermarket Sidekick</title>
+  <script defer src="src/index.js" charset="utf-8"></script>
+  <script>
+    function getLocation() {
+      var x = document.getElementById("demo")
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+      } else {
+        x.innerHTML = "Geolocation is not supported by this browser.";
+      }
+    }
+    function showPosition(position) {
+      x.innerHTML = "Latitude: " + position.coords.latitude +
+        "<br>Longitude: " + position.coords.longitude;
+    }
+  </script>
+
+  <div class="topnav">
+    <h1><img src="/images/supermarket_logo.png" alt="logo" width="100" height="100">Supermarket Sidekick</h1>
+    <a href="index.html">Home</a>
+    <a href="about.html">About the Creators</a>
+    <a href="products.html">Products</a>
+    <div>
+      <form id="form">
+        <input type="search" id="query" name="s" placeholder="Search..." aria-label="Search for an item on the site">
+        <button>Search</button>
+      </form>
+    </div>
+  </div>
+
+  <p>Here is some sample data:</p>
+  <table class="products">
+    <thead>
+      <tr>
+        <th rowspan="2">Product</th>
+        <th colspan="3">Kroger</th>
+        <th colspan="3">Walmart</th>
+        <th colspan="3">Target</th>
+      </tr>
+      <tr>
+        <th>weight</th>
+        <th>price</th>
+        <th>notes</th>
+        <th>weight</th>
+        <th>price</th>
+        <th>notes</th>
+        <th>weight</th>
+        <th>price</th>
+        <th>notes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>Aluminum Foil</th>
+        <td>75ft</td>
+        <td>$4.99</td>
+        <td>Reynolds Wrap</td>
+        <td>75ft</td>
+        <td>4.59</td>
+        <td>Reynolds Wrap</td>
+        <td>75ft</td>
+        <td>5.99</td>
+        <td>Reynolds Wrap</td>
+      </tr>
+      <tr>
+        <th>White Bread</th>
+        <td>20oz</td>
+        <td>$.99</td>
+        <td>Great Value</td>
+        <td>20oz</td>
+        <td>1.39</td>
+        <td>Kroger</td>
+        <td>20oz</td>
+        <td>2.99</td>
+        <td>Nature's Own</td>
+      </tr>
+    </tbody>
+  </table>
+</head>
+
 </html>
