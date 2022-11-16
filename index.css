@@ -1,23 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Trirong:ital,wght@1,300&display=swap');
 
+
+
 @font-face {
   font-family: MilkyHoney;
   src: url(/assets/milky_honey.ttf);
 }
 
 body {
-  background-color: #FAF6F6;
+  background-color: #e39dcc;
 }
 
 h1 {
   font-family: 'MilkyHoney', serif;
   text-align: center;
+  font-size: 100px;
 
 }
 
 .topnav {
   text-align: center;
-  background-color: #75B09c;
+  background-color: #a57dbe;
   overflow: hidden;
   color: white;
 }
@@ -52,8 +55,9 @@ html {
 .about-section {
   padding: 50px;
   text-align: center;
-  background-color: #474e5d;
+  background-color: #365683;
   color: white;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .container {
