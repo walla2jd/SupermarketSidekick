@@ -6,6 +6,8 @@
     <link rel="stylesheet" href="index.css">
     <title>Supermarket Sidekick</title>
     <script defer src="src/index.js" charset="utf-8"></script>
+    <script type = "text/javascript" src="index.js"></script> 
+    <script src="//script.sheetsu.com/"></script>
     <script>
         function getLocation() {
             var x = document.getElementById("demo")
@@ -26,16 +28,26 @@
         <a href="index.html">Home</a>
         <a href="about.html">About the Creators</a>
         <a href="products.html">Products</a>
-        <div>
-            <form id="form">
-                <input type="search" id="query" name="s" placeholder="Search..."
-                    aria-label="Search for an item on the site">
-                <button>Search</button>
-            </form>
-        </div>
     </div>
-
-    <h1>Nothing is here...yet!</h1>
+    <input type="text" id="myInput" onkeyup="searchProducts()" placeholder="Search for products..">
 </head>
-
+<body>
+    <table>
+        <thead>
+            <tr>
+            <th>Whole Foods</th>
+            </tr>
+            <th>Item</th>
+            <th>Price</th>
+        </thead>
+        <tbody sheetsu="https://sheetsu.com/apis/v1.0su/e47ff91aeae8" class="products" id="myTable">
+          <tr>
+            <td>{{Item }}</td>
+            <td>{{Price}}</td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <script src="//load.sheetsu.com"></script>
+</body>
 </html>

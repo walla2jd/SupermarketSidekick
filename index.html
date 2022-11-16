@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <link rel="stylesheet" href="index.css">
   <title>Supermarket Sidekick</title>
-  <script defer src="src/index.js" charset="utf-8"></script>
+  <script type = "text/javascript" src="index.js"></script> 
   <script>
     function getLocation() {
       var x = document.getElementById("demo")
@@ -21,21 +21,17 @@
     }
   </script>
 
+  </script>
   <div class="topnav">
     <h1><img src="/images/supermarket_logo.png" alt="logo" width="100" height="100">Supermarket Sidekick</h1>
     <a href="index.html">Home</a>
     <a href="about.html">About the Creators</a>
     <a href="products.html">Products</a>
-    <div>
-      <form id="form">
-        <input type="search" id="query" name="s" placeholder="Search..." aria-label="Search for an item on the site">
-        <button>Search</button>
-      </form>
-    </div>
   </div>
 
   <p>Here is some sample data:</p>
-  <table class="products">
+  <input type="text" id="myInput" onkeyup="searchProducts()" placeholder="Search for products..">
+  <table class="products" id="myTable">
     <thead>
       <tr>
         <th rowspan="2">Product</th>
@@ -61,7 +57,7 @@
     </thead>
     <tbody>
       <tr>
-        <th>Aluminum Foil</th>
+        <td>Aluminum Foil</td>
         <td>75ft</td>
         <td>$4.99</td>
         <td>Reynolds Wrap</td>
@@ -79,7 +75,7 @@
         <td>Aldi Wrap</td>
       </tr>
       <tr>
-        <th>White Bread</th>
+        <td>White Bread</td>
         <td>20oz</td>
         <td>$.99</td>
         <td>Great Value</td>
@@ -92,6 +88,42 @@
         <td>20oz</td>
         <td>2.99</td>
         <td>Farms</td>
+      </tr>
+      <tr>
+        <td>Stones</td>
+        <td>20oz</td>
+        <td>$.99</td>
+        <td>Great Value</td>
+        <td>20oz</td>
+        <td>1.39</td>
+        <td>Kroger</td>
+        <td>20oz</td>
+        <td>2.99</td>
+        <td>Nature's Own</td>
+      </tr>
+      <tr>
+        <td>KitKat Bar</td>
+        <td>10oz</td>
+        <td>$.99</td>
+        <td>-</td>
+        <td>10oz</td>
+        <td>$1.09</td>
+        <td>-</td>
+        <td>10oz</td>
+        <td>$.99</td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td>Tires</td>
+        <td>All Tires</td>
+        <td>$199.99</td>
+        <td>Great Value</td>
+        <td>2 Tires</td>
+        <td>$199.99</td>
+        <td>-</td>
+        <td>:)</td>
+        <td>$209.99</td>
+        <td>Jiffy</td>
       </tr>
     </tbody>
   </table>
