@@ -6,9 +6,16 @@
   font-family: MilkyHoney;
   src: url(/assets/milky_honey.ttf);
 }
-
+@font-face {
+  font-family: Nexa;
+  src: url(/assets/nexa-light.otf);
+}
+@font-face {
+  font-family: NexaBold;
+  src: url(/assets/nexa-bold.otf);
+}
 body {
-  background-color: #e39dcc;
+  background-color: #ffedde;
 }
 
 h1 {
@@ -18,13 +25,45 @@ h1 {
 
 }
 
+h2{
+  font-family: NexaBold;
+  text-align: center;
+  color:black;
+  font-size: 50px;
+
+}
+
+p{
+  font-family: Nexa;
+  text-align: center;
+  color: black;
+}
+
 .topnav {
   text-align: center;
-  background-color: #a57dbe;
+  background-color: #FFBD59;
   overflow: hidden;
   color: white;
 }
 
+a:link{
+color: white;
+font-size: 20px;
+font-family: 'NexaBold', serif;
+}
+
+a:active{
+  color: #004AAD;
+  font-size: 20px;
+  font-family: 'NexaBold', serif;
+}
+
+a:visited{
+  color: white;
+  font-size: 20px;
+  font-family: 'NexaBold', serif;
+  }
+  
 --About The Creators Section body {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
@@ -32,6 +71,10 @@ h1 {
 
 html {
   box-sizing: border-box;
+}
+
+#about{
+  color: white;
 }
 
 *,
@@ -42,7 +85,7 @@ html {
 
 .column {
   float: left;
-  width: 33.3%;
+  width: 25%;
   margin-bottom: 16px;
   padding: 0 8px;
 }
@@ -53,11 +96,17 @@ html {
 }
 
 .about-section {
-  padding: 50px;
+  margin-top: 10px;
+  padding: 20px;
   text-align: center;
   background-color: #365683;
   color: white;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.about-section h1{
+  font-family: NexaBold;
+  font-size: larger;
 }
 
 .container {
@@ -100,32 +149,45 @@ html {
 
 table.products {
   border: 1px solid #000000;
-  width: 100%;
+  float:left;
   text-align: center;
   border-collapse: collapse;
+  margin: 10px;
+  font-family: Nexa;
 }
 
 table.products td,
 table.products th {
-  border: 1px solid #AAAAAA;
-  padding: 2px 8px;
+  border: 1px solid #000000;
+  padding: 2px;
 }
 
 table.products tbody td {
   font-size: 13px;
+  padding: 5px;
 }
 
-table.products thead {
-  background: #75B09C;
-  border-bottom: 2px solid #C5C5C5;
+
+table.wholefoods thead {
+  background: #006F46;
+  color:white;
+}
+
+table.aldi thead{
+  background: #001E5E;
+  color:white;
+}
+
+table.kroger thead {
+  background: #21409A;
+  color:white;
 }
 
 table.products thead th {
   font-size: 15px;
   font-weight: bold;
-  color: #FFFFFF;
+  color:white;
   text-align: center;
-  border-left: 2px solid #C5C5C5;
 }
 
 table.products thead th:first-child {
@@ -135,10 +197,37 @@ table.products thead th:first-child {
 table.products tfoot {
   font-size: 14px;
   font-weight: bold;
-  color: #FFFFFF;
+  color: #000;
   border-top: 2px solid #444444;
 }
 
 table.products tfoot td {
   font-size: 14px;
+}
+
+#home h2{
+  text-align: center;
+  color:white
+}
+
+#home p{
+  text-align: center;
+  color:white
+}
+
+input[type=text] {
+  border-radius: 25px;
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 25%;
+  font-family: Nexa;
+}
+
+div.card img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 8px;
+  width: 50%;
+  border-radius: 50%;
 }

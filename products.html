@@ -32,22 +32,51 @@
     <input type="text" id="myInput" onkeyup="searchProducts()" placeholder="Search for products..">
 </head>
 <body>
-    <table>
+    <table class="products wholefoods" id="myTable">
         <thead>
             <tr>
-            <th>Whole Foods</th>
+            <th colspan="3" class="wholefoods">Whole Foods</th>
             </tr>
             <th>Item</th>
             <th>Price</th>
         </thead>
-        <tbody sheetsu="https://sheetsu.com/apis/v1.0su/e47ff91aeae8" class="products" id="myTable">
+        <tbody sheetsu="https://sheetsu.com/apis/v1.0su/e47ff91aeae8">
           <tr>
-            <td>{{Item }}</td>
+            <td>{{Item}}</td>
             <td>{{Price}}</td>
           </tr>
         </tbody>
       </table>
-      
+      <table class="products aldi" id="myTable">
+        <thead>
+            <tr>
+            <th colspan="3" class="aldi">Aldi</th>
+            </tr>
+            <th>Item</th>
+            <th>Price</th>
+        </thead>
+        <tbody sheetsu="https://sheetsu.com/apis/v1.0su/e47ff91aeae8/sheets/Aldi">
+          <tr>
+            <td>{{Item}}</td>
+            <td>{{Price}}</td>
+          </tr>
+        </tbody>
+      </table>
+      <table class="products kroger" id="myTable">
+        <thead>
+            <tr>
+            <th colspan="3" class="kroger">Kroger</th>
+            </tr>
+            <th>Item</th>
+            <th>Price</th>
+        </thead>
+        <tbody sheetsu="https://sheetsu.com/apis/v1.0su/e47ff91aeae8/sheets/Kroger" class="products" id="myTable">
+          <tr>
+            <td>{{Item}}</td>
+            <td>{{Price}}</td>
+          </tr>
+        </tbody>
+      </table>
       <script src="//load.sheetsu.com"></script>
 </body>
 </html>
