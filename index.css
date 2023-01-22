@@ -22,7 +22,7 @@ h1 {
   font-family: 'MilkyHoney', serif;
   text-align: center;
   font-size: 100px;
-
+  color: white;
 }
 
 h2{
@@ -40,12 +40,19 @@ p{
 }
 
 .topnav {
-  text-align: center;
   background-color: #FFBD59;
   overflow: hidden;
-  color: white;
 }
+.topnav-right {
+  float: right;
+}
+.topnav a{
+  float: left;
+  text-align: center;
+  color: white;
+  padding: 0px 4px;
 
+}
 a:link{
 color: white;
 font-size: 20px;
