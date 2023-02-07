@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Trirong:ital,wght@1,300&display=swap');
+
+@font-face {
+  font-family: MilkyHoney;
+  src: url(/assets/milky_honey.ttf);
+}
+@font-face {
+  font-family: Nexa;
+  src: url(/assets/nexa-light.otf);
+}
+@font-face {
+  font-family: NexaBold;
+  src: url(/assets/nexa-bold.otf);
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    background: #ffedde;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.topnav h1 {
+    font-family: 'MilkyHoney', serif;
+    text-align: center;
+    font-size: 100px;
+    color: white;
+  }
+  
+  h2{
+    font-family: NexaBold;
+    text-align: center;
+    color:black;
+    font-size: 50px;
+  }
+  
+  p{
+    font-family: Nexa;
+    text-align: center;
+    color: black;
+  }
+  
+  .topnav {
+    display: block;
+    background-color: #FFBD59;
+    overflow: hidden;
+  }
+  .topnav-right {
+    float: right;
+  }
+  .topnav a{
+    float: left;
+    text-align: center;
+    color: white;
+    padding: 0px 4px;
+    font-size: 20px;
+    font-family: 'NexaBold', serif;
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+}
+#content_container {
+    margin: auto;
+    padding-top: 20px;
+    width: 30%;
+    height: 55%;
+}
+
+#form_container {
+    width: 100%;
+    height: 100%;
+
+    background-color: #ffedde;
+    box-shadow: 0 0 50px -20px #000;
+    border-radius: 2%;
+
+    overflow: hidden;
+}
+
+#form_header_container {
+    width: 100%;
+    height: 5%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: left;
+
+    padding: 20px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+
+    border-bottom: 1px solid transparent;
+    border-color: #ffedde;
+    background: #FFBD59;
+}
+
+#form_header {
+    display: inline-block;
+    color: white;
+    font-size: 15px;
+    font-family: NexaBold;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#form_content_container {
+    width: 100%;
+    height: 90%;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+}
+
+#form_content_inner_container {
+    width: 75%;
+    height: 100%;
+    float: left;
+}
+
+input {
+    width: 100%;
+    height: 40px;
+    padding-left: 10px;
+    margin-bottom: 20px;
+    background: rgb(247, 228, 228);
+    font-family: Nexa;
+    font-weight: 500;
+    color: black;
+    font-size: 12px;
+    border-bottom: 2px solid transparent;
+    border-top-left-radius: 2%;
+    border-top-right-radius: 2%;
+    border-color: #FFBD59;
+}
+
+#button_container {
+    width: 100%;
+    height: 10%;
+    background-color: #FFBD59;
+    color: #fff;
+    float: left;
+    margin-top: 5px;
+}
+
+#button_container button {
+    width: 50%;
+    height: 100%;
+    float: left;
+    background: transparent;
+    color: inherit;
+    font-family: NexaBold;
+    letter-spacing: 1px;
+    font-weight: 900;
+    font-size: 12px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#forgotpass {
+    font-family: NexaBold;
+    color: #FFBD59;
+    text-align: center;
+    text-decoration-line: underline;
+    padding-top: 3px;
+}

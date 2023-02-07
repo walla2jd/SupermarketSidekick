@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Trirong:ital,wght@1,300&display=swap');
 
-
-
 @font-face {
   font-family: MilkyHoney;
   src: url(/assets/milky_honey.ttf);
@@ -22,7 +20,7 @@ h1 {
   font-family: 'MilkyHoney', serif;
   text-align: center;
   font-size: 100px;
-
+  color: white;
 }
 
 h2{
@@ -40,12 +38,19 @@ p{
 }
 
 .topnav {
-  text-align: center;
   background-color: #FFBD59;
   overflow: hidden;
-  color: white;
 }
+.topnav-right {
+  float: right;
+}
+.topnav a{
+  float: left;
+  text-align: center;
+  color: white;
+  padding: 0px 4px;
 
+}
 a:link{
 color: white;
 font-size: 20px;
