@@ -13,6 +13,16 @@ var firebaseConfig = {
   const auth = firebase.auth()
   const database = firebase.database()
   
+  //See if user is signed in
+  firebase.auth().currentUser(function(user) {
+    var login = document.getElementById("content_container")
+    if (user) {
+      login.style.display === "none";
+    } else {
+      login.style.display === "initial";
+    }
+  });
+
   // Set up our register function
   function register () {
     // Get all our input fields
@@ -56,6 +66,7 @@ var firebaseConfig = {
   
       // Done
       alert('User has been created.')
+      window.location.reload();
     })
     .catch(function(error) {
       // Firebase will use this to alert of its errors
@@ -97,6 +108,7 @@ var firebaseConfig = {
   
       // DOne
       alert('User logged in.')
+      window.location.reload();
   
     })
     .catch(function(error) {
@@ -124,7 +136,7 @@ var firebaseConfig = {
   }
   
   function validate_password(password) {
-    // Firebase only accepts lengths greater than 6
+    // Firebase only accepts lengths greater than 8
     if (password < 8) {
       return false
     } else {
