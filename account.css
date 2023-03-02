@@ -176,3 +176,7 @@ input {
     text-decoration-line: underline;
     padding-top: 3px;
 }
+
+#account_information {
+  display: none;
+}

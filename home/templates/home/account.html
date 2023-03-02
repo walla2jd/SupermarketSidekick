@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
+    {% load static %}
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="utf-8">
         <title>Supermarket Sidekick - Log in/Sign up</title>
-        <link rel="stylesheet" type="text/css" href="account.css">
+        <link rel="stylesheet" href="{% static 'home/account.css' %}">
 
         <div class="topnav">
             <h1><img src="/images/supermarket_logo.png" alt="logo" width="100" height="100">Supermarket Sidekick</h1>
@@ -16,7 +17,7 @@
             </div>
           </div>
     </head>
-    <body onload="checkUser">
+    <body>
         <div id="content_container">
             <div id="form_container">
                 <div id="form_header_container">
@@ -43,16 +44,12 @@
                 </div>
             </div>
         </div>
-        <div id="account_information">
-            <p>Welcome, <span id="userFullName"></span>!</p>
-            <button onclick="logout()">Logout</button>
-            <h1>Your List</h1>
-        </div>
     </body>
 
     <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+
     <script src="account.js"></script>
 
 </html>

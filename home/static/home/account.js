@@ -1,46 +1,28 @@
 // Your web app's Firebase configuration
 var firebaseConfig = {
-  apiKey: "AIzaSyATXHspBPl_tWp7XH3EUe6xHjA8naLeFEI",
+    apiKey: "AIzaSyATXHspBPl_tWp7XH3EUe6xHjA8naLeFEI",
   authDomain: "supermarket-sidekick-it2023.firebaseapp.com",
-  databaseURL: "https://supermarket-sidekick-it2023-default-rtdb.firebaseio.com",
   projectId: "supermarket-sidekick-it2023",
   storageBucket: "supermarket-sidekick-it2023.appspot.com",
   messagingSenderId: "979546503381",
-  appId: "1:979546503381:web:35e38da13ad91b91960a5c",
+  appId: "1:979546503381:web:35e38da13ad91b91960a5c"
   };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
   // Initialize variables
   const auth = firebase.auth()
-  const database = firebase.database()
-
+  const database = firebase.firestore()
+  
   //See if user is signed in
-  window.onload = function checkUser () {
-    firebase.auth().onAuthStateChanged((user) => {
+  firebase.auth().currentUser(function(user) {
+    var login = document.getElementById("content_container")
     if (user) {
-      document.getElementById("content_container").style.display = "none";
-      document.getElementById("account_information").style.display = "block";
-      var userFullName = document.getElementById("userFullName");
-      var updateName = function(element, value) {
-        element.textContent = value;
-       };
-       var uid = user.uid;
-      const dbRef = firebase.database().ref();
-      dbRef.child("users").child(uid).child("full_name").get().then((snapshot) => {
-        if (snapshot.exists()) {
-          updateName(userFullName, snapshot.val());
-        } else {
-          alert("No data available")
-        }
-      }).catch((error) => {
-        console.error(error); 
-      });
+      login.style.display === "none";
     } else {
-      document.getElementById("content_container").style.display = "block";
-      document.getElementById("account_information").style.display = "none";
+      login.style.display === "initial";
     }
-  })
-  } 
+  });
+
   // Set up our register function
   function register () {
     // Get all our input fields
@@ -173,11 +155,3 @@ var firebaseConfig = {
       return true
     }
   }
-
-  function logout () {
-    firebase.auth().signOut().then(() => {
-      alert('User signed out.')
-    }).catch((error) => {
-      alert('Error signing out.')
-    });
-  };

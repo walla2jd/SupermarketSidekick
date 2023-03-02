@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  {% load static %}
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="{% static 'home/index.css' %}">
+  <title>Supermarket Sidekick</title>
+  <script type = "text/javascript" src="index.js"></script> 
+  <script>
+    function getLocation() {
+      var x = document.getElementById("demo")
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+      } else {
+        x.innerHTML = "Geolocation is not supported by this browser.";
+      }
+    }
+    function showPosition(position) {
+      x.innerHTML = "Latitude: " + position.coords.latitude +
+        "<br>Longitude: " + position.coords.longitude;
+    }
+  </script>
+
+  </script>
+  <div class="topnav">
+    <h1><img src="/images/supermarket_logo.png" alt="logo" width="100" height="100">Supermarket Sidekick</h1>
+    <a href="index.html">Home</a>
+    <a href="about.html">About the Creators</a>
+    <a href="products.html">Products</a>
+    <div class="topnav-right">
+      <a href="account.html">Account</a>
+    </div>
+  </div>
+
+  <h2 id="home">Welcome to Supermarket Sidekick!</h2>
+  <p id="home">Supermarket Sidekick is a web application that will allow users to compare sales of different sites in one location.</p>
+  <p id="home">We currently are working to offer multiple stores such as Whole Foods, Aldi, and Kroger where it may not be as easy to shop for deals.</p>
+</html>
